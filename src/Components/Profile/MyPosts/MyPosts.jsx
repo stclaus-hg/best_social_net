@@ -15,9 +15,9 @@ class MyPosts extends Component {
                     New post
                 </div>
                 <div>
-                    <Post />
-                    <Post />
-                    <Post />
+                    <Post message="Post 1" likes="10" />
+                    <Post message="Post 2" likes="20" />
+                    <Post message="Post 3" likes="5" />
                 </div>
             </div>
         );
