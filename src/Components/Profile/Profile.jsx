@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import style from './Profile.module.css'
+import MyPosts from "./MyPosts/MyPosts";
 
 class Profile extends Component {
     constructor(props) {
@@ -15,16 +16,7 @@ class Profile extends Component {
                 <div>
                     ava + description
                 </div>
-                <div>
-                    My posts
-                    <div>
-                        New post
-                    </div>
-                    <div>
-                        <div className={style.item}>Post 1</div>
-                        <div className={style.item}>Post 2</div>
-                    </div>
-                </div>
+                <MyPosts />
             </div>
         );
     }
