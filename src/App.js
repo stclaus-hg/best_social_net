@@ -7,6 +7,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Settings from './Components/Settings/Settings';
 import Music from './Components/Music/Music';
 import News from './Components/News/News';
+import Notfound from './Components/Notfound/Notfound';
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                     <Route path='/news' element={<News />} />
                     <Route path='/music' element={<Music />} />
                     <Route path='/settings' element={<Settings />} />
+                    <Route path='*' element={<Notfound />} />
                 </Routes>
             </div>
         </div>

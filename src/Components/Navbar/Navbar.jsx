@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import style from './Navbar.module.css'
+import { NavLink } from "react-router-dom";
+
+const setActive = ({isActive}) => isActive ? style.active : ''; 
 
 export default class Navbar extends Component {
     render() {
@@ -7,19 +10,19 @@ export default class Navbar extends Component {
             <>
                 <nav className={style.nav}>
                     <div className={style.item}>
-                        <a href="/profile">Profile</a>
+                        <NavLink to="/profile" className={setActive}>Profile</NavLink>
                     </div>
                     <div className={style.item}>
-                        <a href="/dialogs">Messages</a>
+                        <NavLink to="/dialogs" className={setActive}>Messages</NavLink>
                     </div>
                     <div className={style.item}>
-                        <a href="/news">News</a>
+                        <NavLink to="/news" className={setActive}>News</NavLink>
                     </div>
                     <div className={style.item}>
-                        <a href="/music">Music</a>
+                        <NavLink to="/music" className={setActive}>Music</NavLink>
                     </div>
                     <div className={style.item}>
-                        <a href="/settings">Settings</a>
+                        <NavLink to="/settings" className={setActive}>Settings</NavLink>
                     </div>
                 </nav>
             </>
