@@ -4,15 +4,11 @@ import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 class Profile extends Component {
-    constructor(props) {
-        super(props);
-    }
-    state = {}
     render() {
         return (
             <div className={style.content}>
                 <ProfileInfo />
-                <MyPosts />
+                <MyPosts postsData={this.props.postsData}/>
             </div>
         );
     }
